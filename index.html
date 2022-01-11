@@ -17,7 +17,6 @@
   <head>
     <style>
       /*
-            EX6) Write a selector to target the last blog post
             EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
             EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
@@ -89,6 +88,12 @@
       nav > a:nth-child(2n) {
         background-color: aquamarine;
       }
+
+      /*EX6) Write a selector to target the last blog post*/
+      .blog-post:last-of-type {
+        background-color: lightsteelblue;
+      }
+
     </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
