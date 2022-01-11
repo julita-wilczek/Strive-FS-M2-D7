@@ -15,11 +15,6 @@
     -->
 
   <head>
-    <style>
-      /*
-            EX10) Write a selector to target the footer
-        */
-    </style>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -98,21 +93,23 @@
 
       /*EX8) Write a selector to target the second post author*/
       p.blog-post-meta:nth-of-type(2) a {
-          background-color: aquamarine;
+        background-color: aquamarine;
       }
 
       /*EX9) Write a selector to target the "back to top" link    
        #### EXTRA Try doing it without targeting the footer element directly*/
-      footer p:last-of-type a {
-          background-color: cadetblue;
+      footer p:last-of-type > a {
+        background-color: cadetblue;
       }
-  /* does not yet work properly 
-      body p:last-of-type a {
-        background-color: magenta;
+   
+      p:last-of-type:not(.lead) a {
+        background-color: lightpink;
       }
-*/
 
-
+      /* EX10) Write a selector to target the footer */
+      footer {
+        background-color: lightgrey;
+      }
     </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
