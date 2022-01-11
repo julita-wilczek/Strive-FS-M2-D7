@@ -17,8 +17,6 @@
   <head>
     <style>
       /*
-            
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
     </style>
@@ -102,6 +100,18 @@
       p.blog-post-meta:nth-of-type(2) a {
           background-color: aquamarine;
       }
+
+      /*EX9) Write a selector to target the "back to top" link    
+       #### EXTRA Try doing it without targeting the footer element directly*/
+      footer p:last-of-type a {
+          background-color: cadetblue;
+      }
+  /* does not yet work properly 
+      body p:last-of-type a {
+        background-color: magenta;
+      }
+*/
+
 
     </style>
     <link
