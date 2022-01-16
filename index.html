@@ -445,7 +445,6 @@ My original selector:
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a
               class="btn btn-outline-secondary disabled"
-              href="#"
               tabindex="-1"
               aria-disabled="true"
               >Newer</a
@@ -586,8 +585,23 @@ My original selector:
         }
 
           trim()
+
+          // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+          function newPost(){
+            let newerButton = document.querySelector(".blog-pagination a:last-of-type")
+            newerButton.classList.remove("disabled")
+            newerButton.addEventListener("click", function () {
+            let newPost = document.createElement("div")
+            newPost.innerHTML = `<h2 class="blog-post-title">Newer feature</h2>`
+            let blogNav = document.querySelector(".blog-pagination")
+            let blogSection = document.querySelector(".blog-main")
+            blogSection.insertBefore(newPost, blogNav)
+            })
+          }
+
+          newPost()
 /*
-          EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+         
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
