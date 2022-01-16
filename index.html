@@ -574,42 +574,19 @@ My original selector:
 
           removeSearchIcon()
 
+          //EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+          function trim (){
+            let firstParagraphs = document.querySelectorAll(".blog-post p:nth-of-type(2)")
+            for (let firstParagraph of firstParagraphs) {
+            firstParagraph.style.overflow = "hidden"
+            firstParagraph.style.maxWidth = "50ch"
+            firstParagraph.style.textOverflow = "ellipsis"
+            firstParagraph.style.whiteSpace = "nowrap";
+          }
+        }
+
+          trim()
 /*
-           <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1">
-            <a class="text-muted" href="#">Subscribe</a>
-          </div>
-          <div class="col-4 text-center">
-            <a class="blog-header-logo text-dark" href="#">Large</a>
-          </div>
-          <div class="col-4 d-flex justify-content-end align-items-center">
-            <a class="text-muted" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="mx-3"
-                role="img"
-                viewBox="0 0 24 24"
-                focusable="false"
-              >
-                <title>Search</title>
-                <circle cx="10.5" cy="10.5" r="7.5" />
-                <path d="M21 21l-5.2-5.2" />
-              </svg>
-            </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-          </div>
-        </div>
-      </header>
-          
-          EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
           EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
