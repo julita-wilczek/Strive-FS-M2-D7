@@ -87,10 +87,10 @@
       }
 
       /*EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
-      .blog-sidebar div:nth-child(2) > ol > li{
+      .blog-sidebar div:nth-child(2) > ol > li {
         background-color: rgb(245, 204, 245);
       }
-/*
+      /*
 My original selector:
 .list-unstyled.mb-0
 */
@@ -105,7 +105,7 @@ My original selector:
       footer p:last-of-type > a {
         background-color: cadetblue;
       }
-   
+
       p:last-of-type:not(.lead) a {
         background-color: rosybrown;
       }
@@ -196,18 +196,7 @@ My original selector:
       <div class="row mb-2">
         <div class="col-md-6">
           <div
-            class="
-              row
-              no-gutters
-              border
-              rounded
-              overflow-hidden
-              flex-md-row
-              mb-4
-              shadow-sm
-              h-md-250
-              position-relative
-            "
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
           >
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -239,18 +228,7 @@ My original selector:
         </div>
         <div class="col-md-6">
           <div
-            class="
-              row
-              no-gutters
-              border
-              rounded
-              overflow-hidden
-              flex-md-row
-              mb-4
-              shadow-sm
-              h-md-250
-              position-relative
-            "
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
           >
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-success">Design</strong>
@@ -512,16 +490,16 @@ My original selector:
           JS Exercises
           EX11) Write a function to add a new link into the navbar */
 
-          function addNewNavLink () {
-            let navbar = document.querySelector("nav")
-            let link = document.createElement("a")
-            link.innerText = "New Link"
-            link.classList.add("p-2", "text-muted")
-            link.href="#"
-            navbar.appendChild(link)
-          }
+      function addNewNavLink() {
+        let navbar = document.querySelector("nav");
+        let link = document.createElement("a");
+        link.innerText = "New Link";
+        link.classList.add("p-2", "text-muted");
+        link.href = "#";
+        navbar.appendChild(link);
+      }
 
-          /* Alternative solution:
+      /* Alternative solution:
             function addNewNavLink () {
             let navbar = document.querySelector(".nav")
             let link = `<a class="p-2 text-muted" href="#">New Link</a>`
@@ -530,101 +508,106 @@ My original selector:
           }
           */
 
-          // EX12) Write a function to change the color of the main title
+      // EX12) Write a function to change the color of the main title
 
-          function changeTitleColor () {
-            let title = document.querySelector(".jumbotron h1")
-            title.style.color = "#ffffff"
-          }
-          changeTitleColor()
+      function changeTitleColor() {
+        let title = document.querySelector(".jumbotron h1");
+        title.style.color = "#ffffff";
+      }
+      changeTitleColor();
 
-          // EX13) Write a function to change the background of the jumbotron
-          function changeJumboBackground () {
-            let jumbo = document.querySelector(".jumbotron")
-            jumbo.classList.replace("bg-dark", "bg-secondary")
-          }
+      // EX13) Write a function to change the background of the jumbotron
+      function changeJumboBackground() {
+        let jumbo = document.querySelector(".jumbotron");
+        jumbo.classList.replace("bg-dark", "bg-secondary");
+      }
 
-          changeJumboBackground()
+      changeJumboBackground();
 
-          //EX14) Write a function to remove all the links under "Elsewhere"
+      //EX14) Write a function to remove all the links under "Elsewhere"
 
-          function removeLinks () {
-            let elsewhere = document.querySelector(".blog-sidebar > div:last-of-type ol")
-            elsewhere.innerHTML = "";
-          }
+      function removeLinks() {
+        let elsewhere = document.querySelector(
+          ".blog-sidebar > div:last-of-type ol"
+        );
+        elsewhere.innerHTML = "";
+      }
 
-          removeLinks()
+      removeLinks();
 
-          //EX15) Write a function to change the column size for heading in jumbotron
+      //EX15) Write a function to change the column size for heading in jumbotron
 
-          function changeColumn () {
-            let colDiv = document.querySelector(".jumbotron div:first-of-type")
-            colDiv.classList.replace("col-md-6", "col-md-8")
-          }
+      function changeColumn() {
+        let colDiv = document.querySelector(".jumbotron div:first-of-type");
+        colDiv.classList.replace("col-md-6", "col-md-8");
+      }
 
-          changeColumn()
+      changeColumn();
 
-          //EX16) Write a function to remove the "Search" magnifying glass icon
+      //EX16) Write a function to remove the "Search" magnifying glass icon
 
-          function removeSearchIcon (){
-            let searchIcon = document.querySelector("svg")
-            searchIcon.remove()
-          }
+      function removeSearchIcon() {
+        let searchIcon = document.querySelector("svg");
+        searchIcon.remove();
+      }
 
-          removeSearchIcon()
+      removeSearchIcon();
 
-          //EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-          function trim (){
-            let firstParagraphs = document.querySelectorAll(".blog-post p:nth-of-type(2)")
-            for (let firstParagraph of firstParagraphs) {
-            firstParagraph.style.overflow = "hidden"
-            firstParagraph.style.maxWidth = "50ch"
-            firstParagraph.style.textOverflow = "ellipsis"
-            firstParagraph.style.whiteSpace = "nowrap";
-          }
+      //EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+      function trim() {
+        let firstParagraphs = document.querySelectorAll(
+          ".blog-post p:nth-of-type(2)"
+        );
+        for (let firstParagraph of firstParagraphs) {
+          firstParagraph.style.overflow = "hidden";
+          firstParagraph.style.maxWidth = "50ch";
+          firstParagraph.style.textOverflow = "ellipsis";
+          firstParagraph.style.whiteSpace = "nowrap";
         }
+      }
 
-          trim()
+      trim();
 
-          // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-          function newPost(){
-            let newerButton = document.querySelector(".blog-pagination a:last-of-type")
-            newerButton.classList.remove("disabled")
-            newerButton.addEventListener("click", function () {
-            let newPost = document.createElement("div")
-            newPost.innerHTML = `<h2 class="blog-post-title">Newer feature</h2>`
-            let blogNav = document.querySelector(".blog-pagination")
-            let blogSection = document.querySelector(".blog-main")
-            blogSection.insertBefore(newPost, blogNav)
-            })
-          }
+      // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+      function newPost() {
+        let newerButton = document.querySelector(
+          ".blog-pagination a:last-of-type"
+        );
+        newerButton.classList.remove("disabled");
+        newerButton.addEventListener("click", function () {
+          let newPost = document.createElement("div");
+          newPost.innerHTML = `<h2 class="blog-post-title">Newer feature</h2>`;
+          let blogNav = document.querySelector(".blog-pagination");
+          let blogSection = document.querySelector(".blog-main");
+          blogSection.insertBefore(newPost, blogNav);
+        });
+      }
 
-          newPost()
+      newPost();
 
-          //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-          function removeLastPost(){
-            let olderButton = document.querySelector(".blog-pagination a")
-            olderButton.addEventListener("click", function() {
-              let lastPost = document.querySelector("div.blog-post:last-of-type")
-              lastPost.remove()
-            })
-          }
+      //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+      function removeLastPost() {
+        let olderButton = document.querySelector(".blog-pagination a");
+        olderButton.addEventListener("click", function () {
+          let lastPost = document.querySelector("div.blog-post:last-of-type");
+          lastPost.remove();
+        });
+      }
 
-          removeLastPost()
+      removeLastPost();
 
-          //EX20) Write an alert with the name of the author
-          //every time the user hover with the mouse over an author name
+      //EX20) Write an alert with the name of the author
+      //every time the user hover with the mouse over an author name
 
-          function authorAlert() {
-            let authorNames = document.querySelectorAll(".blog-post-meta a")
-            for (let authorName of authorNames){
-
-            authorName.addEventListener("mouseover", function(){
-              alert(event.target.innerText)
-            })
-          }
+      function authorAlert() {
+        let authorNames = document.querySelectorAll(".blog-post-meta a");
+        for (let authorName of authorNames) {
+          authorName.addEventListener("mouseover", function () {
+            alert(event.target.innerText);
+          });
         }
-          authorAlert()
+      }
+      authorAlert();
     </script>
   </body>
 </html>
