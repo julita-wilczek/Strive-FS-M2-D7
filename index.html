@@ -538,10 +538,19 @@ My original selector:
             title.style.color = "#ffffff"
           }
           changeTitleColor()
+
+          // EX13) Write a function to change the background of the jumbotron
+          function changeJumboBackground () {
+            let jumbo = document.querySelector(".jumbotron")
+            jumbo.classList.replace("bg-dark", "bg-secondary")
+          }
+
+          changeJumboBackground()
+
 /*
 
           
-          EX13) Write a function to change the background of the jumbotron
+          
           EX14) Write a function to remove all the links under "Elsewhere"
           EX15) Write a function to change the column size for heading in jumbotron
           EX16) Write a function to remove the "Search" magnifying glass icon
