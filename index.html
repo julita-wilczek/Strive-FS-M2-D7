@@ -611,11 +611,20 @@ My original selector:
           }
 
           removeLastPost()
-/*
-         
-          
-          EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-      */
+
+          //EX20) Write an alert with the name of the author
+          //every time the user hover with the mouse over an author name
+
+          function authorAlert() {
+            let authorNames = document.querySelectorAll(".blog-post-meta a")
+            for (let authorName of authorNames){
+
+            authorName.addEventListener("mouseover", function(){
+              alert(event.target.innerText)
+            })
+          }
+        }
+          authorAlert()
     </script>
   </body>
 </html>
