@@ -62,7 +62,7 @@
       }
 
       /*EX2) Write a selector to target every children of the navbar*/
-      nav > * {
+      .nav-scroller > * {
         background-color: lightpink;
       }
 
@@ -77,23 +77,27 @@
       }
 
       /*EX5) Write a selector to target the "even" links in the navbar */
-      nav > a:nth-child(2n) {
+      nav-scroller > a:nth-child(2n) {
         background-color: aquamarine;
       }
 
       /*EX6) Write a selector to target the last blog post*/
       .blog-post:last-of-type {
-        background-color: lightsteelblue;
+        background-color: lightslategray;
       }
 
       /*EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
-      .list-unstyled.mb-0 {
-        background-color: lightpink;
+      .blog-sidebar div:nth-child(2) > ol > li{
+        background-color: rgb(245, 204, 245);
       }
+/*
+My original selector:
+.list-unstyled.mb-0
+*/
 
       /*EX8) Write a selector to target the second post author*/
-      p.blog-post-meta:nth-of-type(2) a {
-        background-color: aquamarine;
+      div.blog-post:nth-of-type(2) > h2 + p > a {
+        background-color: rgb(161, 231, 208);
       }
 
       /*EX9) Write a selector to target the "back to top" link    
@@ -103,7 +107,7 @@
       }
    
       p:last-of-type:not(.lead) a {
-        background-color: lightpink;
+        background-color: rosybrown;
       }
 
       /* EX10) Write a selector to target the footer */
