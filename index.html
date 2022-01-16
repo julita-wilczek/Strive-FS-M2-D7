@@ -547,11 +547,18 @@ My original selector:
 
           changeJumboBackground()
 
-/*
+          //EX14) Write a function to remove all the links under "Elsewhere"
 
+          function removeLinks () {
+            let elsewhere = document.querySelector(".blog-sidebar > div:last-of-type ol")
+            elsewhere.innerHTML = "";
+          }
+
+          removeLinks()
+
+/*
           
           
-          EX14) Write a function to remove all the links under "Elsewhere"
           EX15) Write a function to change the column size for heading in jumbotron
           EX16) Write a function to remove the "Search" magnifying glass icon
           EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
