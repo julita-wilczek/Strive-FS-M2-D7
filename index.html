@@ -77,7 +77,7 @@
       }
 
       /*EX5) Write a selector to target the "even" links in the navbar */
-      nav-scroller > a:nth-child(2n) {
+      .nav-scroller a:nth-child(2n) {
         background-color: aquamarine;
       }
 
@@ -123,6 +123,7 @@ My original selector:
 
   <body>
     <div class="container">
+      <button onclick="addNewNavLink()">Add link</button>
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
@@ -510,7 +511,27 @@ My original selector:
     <script>
       /*
           JS Exercises
-          EX11) Write a function to add a new link into the navbar
+          EX11) Write a function to add a new link into the navbar */
+
+          function addNewNavLink () {
+            let navbar = document.querySelector("nav")
+            let link = document.createElement("a")
+            link.innerText = "New Link"
+            link.classList.add("p-2", "text-muted")
+            link.href="#"
+            navbar.appendChild(link)
+          }
+
+          /* Alternative solution:
+            function addNewNavLink () {
+            let navbar = document.querySelector(".nav")
+            let link = `<a class="p-2 text-muted" href="#">New Link</a>`
+            navbar.innerHTML += link;
+         
+          }
+          */
+
+/*
           EX12) Write a function to change the color of the main title
           EX13) Write a function to change the background of the jumbotron
           EX14) Write a function to remove all the links under "Elsewhere"
