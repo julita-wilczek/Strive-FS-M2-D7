@@ -600,9 +600,20 @@ My original selector:
           }
 
           newPost()
+
+          //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+          function removeLastPost(){
+            let olderButton = document.querySelector(".blog-pagination a")
+            olderButton.addEventListener("click", function() {
+              let lastPost = document.querySelector("div.blog-post:last-of-type")
+              lastPost.remove()
+            })
+          }
+
+          removeLastPost()
 /*
          
-          EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+          
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
     </script>
